@@ -47,7 +47,7 @@ app.get('/add-note', async (req, res) => {
                 tenant_id: "15",
             }
         ]);
-        res.send('Registered_accounts Added...')
+        res.send('Registered_account Added...')
     } catch (error) {
         console.log("err", + error);
     }
@@ -55,6 +55,7 @@ app.get('/add-note', async (req, res) => {
 
 app.get('/registered_accounts', async (req,res)=> {
     const registered_accounts = await Registered_accounts.find();
+
     if (registered_accounts) {
         res.json(registered_accounts)
     } else {
@@ -62,8 +63,8 @@ app.get('/registered_accounts', async (req,res)=> {
     }
 });
 connectDB().then(() => {
-    app.listen(PORT , () => {
+    app.listen(PORT, () => {
         console.log(`listening on port ${PORT}`)
     })
-})
+});
 
