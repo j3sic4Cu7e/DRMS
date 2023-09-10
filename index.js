@@ -3,8 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const registered_account = require('./dormitory/registered_account');
 
-
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -20,7 +18,7 @@ const connectDB = async ()=> {
 }
 
 app.get('/', (req, res) => {
-    res.send({DRMS: 'registered_account'});
+    res.send({title: 'registered_account'});
 });
 
 app.get('/add-note', async (req, res) => {
