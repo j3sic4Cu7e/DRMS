@@ -30,6 +30,6 @@ const registered_accountSchema = new Schema({
         type: String,
         required: true,
     }        
-})
+});
 
 module.exports = mongoose.model('registered_account', registered_accountSchema);
