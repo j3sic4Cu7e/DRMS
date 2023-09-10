@@ -18,13 +18,12 @@ const connectDB = async ()=> {
 }
 
 app.get('/', (req, res) => {
-    res.send({DRMS: 'registered_accounts'});
+    res.send({tenants_name: 'Jessica Aoanan'});
 });
 
 app.get('/add-note', async (req, res) => {
     try {
-        await Registered_accounts.insertMany
-        ([
+        await Registered_accounts.insertMany([
             {
                 tenants_name: "Jessica Aoanan",
                 tenant_username: "Jessica",
