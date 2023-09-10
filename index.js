@@ -32,6 +32,8 @@ app.get('/add-note', async (req, res) => {
                 tenant_email: "aoananjessica15@gmail.com",
                 tenant_age: "21",
                 tenant_gender: "Female",
+                tenant_status: "Student",
+                tenant_id: "15",
             }
         ]);
         res.send('registered_account Added...')
