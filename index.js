@@ -10,7 +10,7 @@ mongoose.set('strictQuery', false);
 const connectDB = async ()=> {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB Connected: ${conn.connection.host');
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
         console.log(error);
         process.exit(1)
@@ -18,7 +18,7 @@ const connectDB = async ()=> {
 }
 
 app.get('/', (req, res) => {
-    res.send({title: 'registered_account'});
+    res.send({DRMS: 'registered_account'});
 });
 
 app.get('/add-note', async (req, res) => {
