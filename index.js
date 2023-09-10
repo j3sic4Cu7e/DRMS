@@ -18,7 +18,7 @@ const connectDB = async ()=> {
 }
 
 app.get('/', (req, res) => {
-    res.send({tenants_name: 'Jessica Aoanan'});
+    res.send({tenant_name: 'Registered_account'});
 });
 
 app.get('/add-note', async (req, res) => {
