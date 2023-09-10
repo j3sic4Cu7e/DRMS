@@ -40,4 +40,4 @@ const registered_accountsSchema = new Schema({
     }        
 });
 
-module.exports = mongoose.dormitory('registered_accounts', registered_accountsSchema);
+dormitory.exports = mongoose.dormitory('registered_accounts', registered_accountsSchema);
