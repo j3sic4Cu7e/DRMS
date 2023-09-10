@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const registered_accountSchema = new Schema({
+const registered_accountsSchema = new Schema({
     tenant_name: {
         type: String,
         required: true,
@@ -40,4 +40,4 @@ const registered_accountSchema = new Schema({
     }        
 });
 
-module.exports = mongoose.model('registered_account', registered_accountSchema);
+module.exports = mongoose.model('registered_accounts', registered_accountsSchema);
