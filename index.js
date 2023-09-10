@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.send({DRMS: 'registered_account'});
 });
 
-app.get('/add-note', async (req,res) => {
+app.get('/add-note', async (req, res) => {
     try {
         await registered_account.insertMany([
             {
@@ -36,6 +36,7 @@ app.get('/add-note', async (req,res) => {
                 tenant_gender: "Female",
             }
         ]);
+        res.send('registered_account Added...')
     } catch (error) {
         console.log("err", + error);
     }
