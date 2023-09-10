@@ -25,8 +25,16 @@ const registered_accountSchema = new Schema({
     tenant_age: {
         type: String,
         required: true,
-    }, 
+    },  
     tenant_gender: {
+        type: String,
+        required: true,
+    },
+    tenant_status: {
+        type: String,
+        required: true,
+    },
+    tenant_id: {
         type: String,
         required: true,
     }        
