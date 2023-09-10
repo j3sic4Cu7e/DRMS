@@ -29,7 +29,7 @@ const registered_accountSchema = new Schema({
     tenant_gender: {
         type: String,
         required: true,
-    },        
+    }        
 })
 
 module.exports = mongoose.model('registered_account', registered_accountSchema);

@@ -42,7 +42,6 @@ app.get('/add-note', async (req, res) => {
     }
 })
 
-
 app.get('/registered_account', async (req,res)=> {
     const registered_account = await registered_account.find();
     if (registered_account) {
