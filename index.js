@@ -55,7 +55,7 @@ app.get('/add-note', async (req, res) => {
 
 app.get('/registered_accounts', async (req,res)=> {
     const registered_accounts = await registered_accounts.find();
-    if (registered_account) {
+    if (registered_accounts) {
         res.json(registered_accounts)
     } else {
         res.send("Something went wrong");
