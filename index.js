@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const registered_accounts = require('./dormitorys/registered_account');
+const Registered_accounts = require('./dormitory/registered_account');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 app.get('/add-note', async (req, res) => {
     try {
-        await registered_accounts.insertMany([
+        await Registered_accounts.insertMany([
             {
                 tenants_name: "Jessica Aoanan",
                 tenant_username: "Jessica",
@@ -47,14 +47,14 @@ app.get('/add-note', async (req, res) => {
                 tenant_id: "15",
             }
         ]);
-        res.send('registered_accounts Added...')
+        res.send('Registered_accounts Added...')
     } catch (error) {
         console.log("err", + error);
     }
 })
 
 app.get('/registered_accounts', async (req,res)=> {
-    const registered_accounts = await registered_accounts.find();
+    const registered_accounts = await Registered_accounts.find();
     if (registered_accounts) {
         res.json(registered_accounts)
     } else {
