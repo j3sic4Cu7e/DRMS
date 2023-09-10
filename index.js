@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const registered_accounts = require('./dormitory/registered_account');
+const registered_accounts = require('./dormitorys/registered_account');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
