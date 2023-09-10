@@ -40,4 +40,4 @@ const Registered_accountsSchema = new Schema({
     }        
 });
 
-module.exports = mongoose.model('registered_accounts', Registered_accountsSchema);
+module.exports = mongoose.model('Registered_accounts', Registered_accountsSchema);
